@@ -34,10 +34,14 @@ public class _04_RemovingStuffFromArrayLists {
 
 		System.out.println(stuffIFoundInTheYard.size());
 
+		int total = stuffIFoundInTheYard.size();
 		/* TODO 1: Clean out the dirt but keep the delicious worms. */
-		
-		
-		
+		ArrayList<Stuff> temperary = new ArrayList<Stuff>();
+		for (Stuff s : stuffIFoundInTheYard)
+		{
+			if (s.type == "worm") temperary.add(s);
+		}
+		stuffIFoundInTheYard = temperary;
 		
 		System.out.println(stuffIFoundInTheYard.size()); // should be 2
 

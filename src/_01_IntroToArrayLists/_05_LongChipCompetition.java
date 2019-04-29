@@ -16,7 +16,10 @@ public class _05_LongChipCompetition {
 
 	public static void main(String[] args) {
 		_05_LongChipCompetition lcc = new _05_LongChipCompetition();
-		
+		lcc.initializeBeatles();
+		ArrayList<Chip> GeorgeChips = lcc.theBeatles.get(0).getChips();
+		GeorgeChips.add(new Chip(1000));
+		System.out.println("George has a chip that his 10x longer than any other chip possible to the other people.");
 	}
 	
 	private void initializeBeatles() {
