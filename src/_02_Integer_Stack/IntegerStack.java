@@ -32,27 +32,30 @@ public class IntegerStack {
 	public int pop() {
 		//A. create an integer variable and initialize it to the
 		//   last element of the member array.
-		
+		int i = array[array.length - 1];
 		//B. create a new array that is one element smaller than the member array
-		
+		int[] newArray = new int[array.length - 1];
 		//C. iterate through the new array and copy every element from the
 		//   member array to the new array
-		
+		for (int ia = 0; ia < newArray.length;ia++)
+		{
+			newArray[ia] = array[ia];
+		}
 		//D. set the member array equal to the new array
-		
+		array = newArray;
 		//E. return the variable you created in step A
-		return 0;
+		return i;
 	}
 	
 	//5. Complete the clear method to set the
 	//   member array to a new array of length 0
 	public void clear() {
-		
+		array = new int[0];
 	}
 	
 	//6. Complete the size method to return 
 	//   the length of the member array
 	public int size() {
-		return 0;
+		return array.length;
 	}
 }
