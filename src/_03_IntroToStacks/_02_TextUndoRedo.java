@@ -21,7 +21,7 @@ public class _02_TextUndoRedo implements KeyListener{
 	 * off the Stack and added back to the JLabel.
 	 * 
 	 * */
-	Stack<Character> deleted = new Stack<Character>();
+	Stack<String> deleted = new Stack<String>();
 	JFrame jf;
 	JButton jb;
 	JLabel jl;
@@ -59,7 +59,7 @@ public class _02_TextUndoRedo implements KeyListener{
 	}
 	void undo()
 	{
-		
+		jl.setText(jl.getText() + deleted.pop());
 	}
 	
 	void backSpace()
