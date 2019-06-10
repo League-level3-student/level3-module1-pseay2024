@@ -15,6 +15,7 @@ public class HangMan implements KeyListener
 	JFrame jf;
 	JPanel jp;
 	JLabel jl;
+	String word = "";
 	public static void main(String[] args)
 	{
 		HangMan hm = new HangMan();
@@ -27,7 +28,8 @@ public class HangMan implements KeyListener
 			hm.start();
 			for (int i = 0; i < words; i++)
 			{
-				
+				String curWord = ws.pop();
+				hm.word = curWord;
 			}
 		}
 	}
@@ -57,16 +59,15 @@ public class HangMan implements KeyListener
 		jp.add(jl);
 		jf.setVisible(false);
 	}
+	
 	int ask() { return Integer.parseInt(JOptionPane.showInputDialog("HOW MANY WORDS?")); }
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
-		
 	}
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
-		
 	}
 	@Override
 	public void keyReleased(KeyEvent e) {
