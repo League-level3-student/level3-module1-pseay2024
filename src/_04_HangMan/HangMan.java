@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class HangMan{
-	JFrame frame;
+	JFrame jf;
 	JLabel label1, label2; 
 	JPanel panel;
 	String word;
@@ -18,17 +18,17 @@ public class HangMan{
 	int lives = 10;
 	
 	public void createUI() {
-		frame  = new JFrame();
+		jf  = new JFrame();
 		label1 = new JLabel();
 		label2 = new JLabel();
 		panel = new JPanel();
-		frame.add(panel);
+		jf.add(panel);
 		panel.add(label1);
 		panel.add(label2);
 		label1.setText(convert(hiddenWord));
 		label2.setText("Lives: " + lives);
-		frame.setVisible(true);
-		frame.pack();
+		jf.setVisible(true);
+		jf.pack();
 	}
 	
 	public void setUp() {
